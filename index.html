@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Billing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Indian Food Billing App</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Item (English - Tamil)</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                    <th>Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="food-list">
+                <!-- Food items will be added dynamically here -->
+            </tbody>
+        </table>
+        <div class="total-section">
+            <strong>Subtotal: ₹<span id="subtotal">0</span></strong><br>
+            <label>Discount (%): <input type="number" id="discount" value="0" min="0" max="100" onchange="applyDiscount()"></label><br>
+            <strong>Tax (5% GST): ₹<span id="tax">0</span></strong><br>
+            <strong>Grand Total: ₹<span id="grand-total">0</span></strong>
+        </div>
+        <button onclick="printBill()">Print Bill</button>
+        <button onclick="resetBill()">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
